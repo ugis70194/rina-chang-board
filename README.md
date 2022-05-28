@@ -1,24 +1,7 @@
 # rinachang-board
 
-## Project setup
-```
-npm install
-```
+璃奈ちゃんボードを模したやつ
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## できる表情
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- にっこりん
