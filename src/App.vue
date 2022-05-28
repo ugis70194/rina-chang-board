@@ -1,15 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1> Rina chang board </h1>
+  <LEDMatrix/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LEDMatrix from './components/LEDMatrix.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LEDMatrix
   }
 }
 </script>
