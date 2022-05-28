@@ -1,13 +1,12 @@
 <template>
-  <div v-bind:class="{on: ON}">
-    cell
+  <div v-bind:class="{on: this.ON}">
   </div>
 </template>
 
 <script>
 export default {
   name: 'LEDCell',
-  props: {
+  props:{
     ON: Boolean
   }
 }
@@ -17,8 +16,9 @@ export default {
 <style scoped>
 
 div {
-  background-color: lightgray;
-  height: 60px;
+  background-color: whitesmoke;
+  height: 40px;
+  border: solid 1px ;
 }
 
 .on {
