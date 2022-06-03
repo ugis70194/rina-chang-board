@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper">
-    <LEDArray :stateArray="face" v-for="face in faces[this.feceType]" :key="face.id" />
+  <div class="board">
+    <LEDArray :h="h" :stateArray="array" v-for="(array, h) in this.face" :key="array.id" v-on:changeState="changeState"/>
   </div>
   <div>
-    <p> {{  }} </p>
+    <button v-for="facetype in this.faceTypes" :key="facetype.id" @click="changeFaceType(facetype)"> {{ facetype }} </button>
   </div>
 </template>
 
@@ -18,8 +18,23 @@ export default {
   },
   data (){
     return {
-      faces: faces,
-      feceType: "normal",
+      faceType: "defualt",
+      face: faces["defualt"]
+    }
+  },
+  computed: {
+    faceTypes() {
+      return Object.keys(faces);
+    },
+  },
+  methods: {
+    changeFaceType(facetype) {
+      this.faceType = facetype
+      this.face = faces[facetype]
+    },
+    changeState(h, w) {
+      console.log(h, w)
+      this.face[h][w] ^= 1
     }
   }
 }
@@ -27,7 +42,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.wrapper {
+.board {
   margin-left: auto;
   margin-right: auto;
   display: grid;

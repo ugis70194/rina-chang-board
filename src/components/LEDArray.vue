@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <LEDCell :ON="state" v-for="state in stateArray" :key="state.id" />
+    <LEDCell :h="this.h" :w="w" :state="state" v-for="(state, w) in stateArray" :key="state.id" v-on:changeState="changeState" />
   </div>
 </template>
 
@@ -13,8 +13,14 @@ export default {
     LEDCell
   },
   props: {
-    stateArray: Array
-  }
+    stateArray: Array,
+    h: Number
+  },
+  methods: {
+    changeState(h, w) {
+      this.$emit('changeState', h, w)
+    }
+  },
 }
 </script>
 

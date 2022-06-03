@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="{on: this.ON}">
+  <div v-bind:class="{on: this.state}" @click="changeState">
   </div>
 </template>
 
@@ -7,7 +7,14 @@
 export default {
   name: 'LEDCell',
   props:{
-    ON: Boolean
+    state: Number,
+    h: Number,
+    w: Number,
+  },
+  methods: {
+    changeState() {
+      this.$emit('changeState', this.h, this.w)
+    }
   }
 }
 </script>
