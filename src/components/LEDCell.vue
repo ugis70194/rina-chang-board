@@ -24,7 +24,7 @@ export default {
 
 div {
   background-color: whitesmoke;
-  height: 40px;
+  height: 3rem;
   border: solid 1px ;
 }
 
