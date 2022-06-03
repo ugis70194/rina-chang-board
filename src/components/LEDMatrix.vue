@@ -33,7 +33,6 @@ export default {
       this.face = faces[facetype]
     },
     changeState(h, w) {
-      console.log(h, w)
       this.face[h][w] ^= 1
     }
   }
