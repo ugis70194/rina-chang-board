@@ -1,21 +1,6 @@
 <template>
   <div class="wrapper">
-    <LEDArray :stateArray="faces[this.feceType][0]"/>
-    <LEDArray :stateArray="faces[this.feceType][1]"/>
-    <LEDArray :stateArray="faces[this.feceType][2]"/>
-    <LEDArray :stateArray="faces[this.feceType][3]"/>
-    <LEDArray :stateArray="faces[this.feceType][4]"/>
-    <LEDArray :stateArray="faces[this.feceType][5]"/>
-    <LEDArray :stateArray="faces[this.feceType][6]"/>
-    <LEDArray :stateArray="faces[this.feceType][7]"/>
-    <LEDArray :stateArray="faces[this.feceType][8]"/>
-    <LEDArray :stateArray="faces[this.feceType][9]"/>
-    <LEDArray :stateArray="faces[this.feceType][10]"/>
-    <LEDArray :stateArray="faces[this.feceType][11]"/>
-    <LEDArray :stateArray="faces[this.feceType][12]"/>
-    <LEDArray :stateArray="faces[this.feceType][13]"/>
-    <LEDArray :stateArray="faces[this.feceType][14]"/>
-    <LEDArray :stateArray="faces[this.feceType][15]"/>
+    <LEDArray :stateArray="face" v-for="face in faces[this.feceType]" :key="face.id" />
   </div>
   <div>
     <p> {{  }} </p>
